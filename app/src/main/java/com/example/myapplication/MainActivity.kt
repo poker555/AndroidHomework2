@@ -19,12 +19,16 @@ class MainActivity : AppCompatActivity() {
         btn_main.setOnClickListener {
             if (table.length()>=1){
                 startActivity(Intent(this, MainActivity2::class.java))
+                val intent = Intent(this,MainActivity2::class.java)
+                val bundle = Bundle()
+                intent.putExtra(bundle)
 
             }
             else{
                 Toast.makeText(this,"請輸入桌號",Toast.LENGTH_SHORT).show()
             }
         }
+
 
 
     }
